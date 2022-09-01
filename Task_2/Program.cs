@@ -11,7 +11,10 @@ Console.Write("Введите значение N: ");
 int N = int.Parse(Console.ReadLine()!);
 int sum = 0;
 for (int i = M; i <= N; i++)
-{   if (i % 1 == 0) 
-    sum = sum + i;    
+{   
+    if (i % 1 == 0)
+    {
+        sum = sum + i;
+    }    
 }
 Console.WriteLine($"Сумма натуральных элементов от M до N = {sum}");
