@@ -5,26 +5,26 @@
 // m = 2, n = 3 -> A(m,n) = 29
 
 Console.Write("Введите значение m: ");
-int m = int.Parse(Console.ReadLine()!);
+int M = int.Parse(Console.ReadLine()!);
 Console.Write("Введите значение n: ");
-int n = int.Parse(Console.ReadLine()!);
+int N = int.Parse(Console.ReadLine()!);
 
-int functionAkkerman = A(m, n);
+int functionAkkerman = A(M, N);
 
 Console.Write($"Функция Аккермана = {functionAkkerman} ");
 
-int A(int m, int n)
+int A(int M, int N)
 {
-  if (m == 0) 
+  if (M == 0) 
   {
-    return n + 1;
+    return N + 1;
   }
-  else if (n == 0) 
+  else if (N == 0) 
   {
-    return A(m - 1, 1);
+    return A(M - 1, 1);
   }
   else 
   {
-    return A(m - 1, A(m, n - 1));
+    return A(M - 1, A(M, N - 1));
   }
 }
