@@ -4,8 +4,7 @@
 
 // m = 2, n = 3 -> A(m,n) = 29
 
-
-int Akkerman(int m, int n)
+int Akkerman (int m, int n)
 {
   if (m == 0)
   {
@@ -13,15 +12,17 @@ int Akkerman(int m, int n)
   }
   else if (n == 0 && m > 0)
   {
-    return Akkerman(m - 1, 1);
+    return Akkerman (m - 1, 1);
   }
   else
   {
-    return Akkerman(m - 1, Akkerman(m, n - 1));
+    return Akkerman (m - 1, Akkerman(m, n - 1));
   }
 }
 
-int m = InputNumber("Ввод m: ");
-int n = InputNumber("Ввод n: ");
+Console.Write("Введите M: ");
+int m = int.Parse(Console.ReadLine()!);
+Console.Write("Введите N: ");
+int n = int.Parse(Console.ReadLine()!);
 int akkermanFunction = Akkerman(m, n);
 Console.Write($"m = {m}, n = {n} - > A(m,n) = {akkermanFunction} ");
