@@ -6,21 +6,16 @@
 
 // M = 4; N = 8. -> ""4, 6, 7, 8""
 
-Console.Write("Введите значение M: ");
-int M = int.Parse(Console.ReadLine()!);
-Console.Write("Введите значение N: ");
-int N = int.Parse(Console.ReadLine()!);
-if (M > N)
+Console.Clear();
+Console.Write("Введите N: ");
+int n =int.Parse(Console.ReadLine()!);
+Console.Write("Введите M: ");
+int m = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine(PrintNumbers(n,m));
+
+string PrintNumbers(int start, int end)
 {
-    for (int i = N; i <= M; i++)
-    {
-        Console.Write($" {i}");
-    }
-}
-else
-{
-    for (int i = M; i <= N; i++)
-    {
-        Console.Write($" {i}");
-    }
+if (start == end) return start.ToString();
+return (start + " " + PrintNumbers(start + 1, end));
 }
